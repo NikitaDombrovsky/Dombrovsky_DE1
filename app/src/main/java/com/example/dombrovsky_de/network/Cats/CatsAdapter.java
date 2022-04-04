@@ -14,13 +14,14 @@ import com.example.dombrovsky_de.R;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class CatsAdapter extends RecyclerView.Adapter<CatsAdapter.ViewHolder> {
 
-    private ArrayList<CatsResponce> catsResponces;
+    private List<CatsResponce> catsResponces;
     private LayoutInflater inflater;
     private Context context;
 
-    public CatsAdapter(ArrayList<CatsResponce> catsResponces, Context context) {
+    public CatsAdapter(List<CatsResponce> catsResponces, Context context) {
         this.catsResponces = catsResponces;
         this.inflater = LayoutInflater.from(context);
         this.context = context;
@@ -40,8 +41,9 @@ public class CatsAdapter extends RecyclerView.Adapter<CatsAdapter.ViewHolder> {
 
     @Override
     public int getItemCount() {
-        return catsResponces.size();
+        return 0;
     }
+
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
@@ -60,10 +62,6 @@ public class CatsAdapter extends RecyclerView.Adapter<CatsAdapter.ViewHolder> {
             this.Item_Cat_Email = view.findViewById(R.id.Item_Cat_Email);
             this.Item_Cat_Skype = view.findViewById(R.id.Item_Cat_Skype);
         }
-//
-//        public void setTextCats(String text) {
-//            this.Item_Cat_Name.setText(text);
-//        }
 
     }
 }

@@ -7,6 +7,8 @@
         android:layout_alignParentTop="true"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:textColor="@color/black"
+        android:text="Name"
         android:id="@+id/Item_Cat_Name"/>
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,11 +21,15 @@
             <TextView
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/Item_Cat_City"/>
+                android:id="@+id/Item_Cat_City"
+                android:textColor="@color/black"
+                android:text="Name"/>
             <TextView
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/Item_Cat_Mobile"/>
+                android:id="@+id/Item_Cat_Mobile"
+                android:textColor="@color/black"
+                android:text="Name"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -32,11 +38,15 @@
             <TextView
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/Item_Cat_Email"/>
+                android:id="@+id/Item_Cat_Email"
+                android:textColor="@color/black"
+                android:text="Name"/>
             <TextView
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/Item_Cat_Skype"/>
+                android:id="@+id/Item_Cat_Skype"
+                android:textColor="@color/black"
+                android:text="Name"/>
         </LinearLayout>
         <Button
             android:layout_width="match_parent"
