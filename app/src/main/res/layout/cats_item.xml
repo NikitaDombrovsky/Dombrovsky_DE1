@@ -49,6 +49,7 @@
                 android:text="Name"/>
         </LinearLayout>
         <Button
+            android:id="@+id/Item_Button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Фото"/>

@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -20,6 +21,7 @@ public class CatsAdapter extends RecyclerView.Adapter<CatsAdapter.ViewHolder> {
     private List<CatsResponce> catsResponces;
     private LayoutInflater inflater;
     private Context context;
+    private int position;
 
     public CatsAdapter(List<CatsResponce> catsResponces, Context context) {
         this.catsResponces = catsResponces;
@@ -38,6 +40,7 @@ public class CatsAdapter extends RecyclerView.Adapter<CatsAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         CatsResponce catsResponce = catsResponces.get(position);
+        this.position = position;
         Contact contact = catsResponce.contact;
         holder.swtTextName(catsResponce.getName());
         holder.swtTextCity(catsResponce.getCity());
@@ -68,6 +71,19 @@ public class CatsAdapter extends RecyclerView.Adapter<CatsAdapter.ViewHolder> {
             this.Item_Cat_Mobile = view.findViewById(R.id.Item_Cat_Mobile);
             this.Item_Cat_Email = view.findViewById(R.id.Item_Cat_Email);
             this.Item_Cat_Skype = view.findViewById(R.id.Item_Cat_Skype);
+
+            view.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Toast.makeText(context.getApplicationContext(), "1" + position, Toast.LENGTH_LONG).show();
+                }
+            });
+            view.findViewById(R.id.Item_Button).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Toast.makeText(context.getApplicationContext(), "1" + position, Toast.LENGTH_LONG).show();
+                }
+            });
         }
         public void swtTextName(String text){
             this.Item_Cat_Name.setText(text);
