@@ -41,7 +41,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         recyclerView = findViewById(R.id.recyclerView);
-        //lv = findViewById(R.id.recipes_lv);
+       // lv = findViewById(R.id.listviewList);
+
+
         linearLayoutManager = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false);
         SnapHelper snapHelper = new PagerSnapHelper();
         snapHelper.attachToRecyclerView(recyclerView);
@@ -54,7 +56,9 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onResponse(Call<Data> call, Response<Data> response) {
                     if (response.isSuccessful()){
-                        Toast.makeText(getApplicationContext(), "Пидор" +response.message(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), "1" +response.message(), Toast.LENGTH_LONG).show();
+
+
                         catsResponceList = response.body().getDoCats();
                         catsAdapter = new CatsAdapter(catsResponceList, getApplicationContext());
                         recyclerView.setAdapter(catsAdapter);
@@ -79,11 +83,9 @@ public class MainActivity extends AppCompatActivity {
                         //recyclerView.setLayoutManager(linearLayoutManager);
                         //catsAdapter.notifyDataSetChanged();
                         //lv.setAdapter(catsAdapter);
-                        Toast.makeText(getApplicationContext(), "2Пидор" +response.message(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), "2" +response.message(), Toast.LENGTH_LONG).show();
                    } else if (response.code() == 400) {
-                        Toast.makeText(getApplicationContext(),"1 "+ response.message(), Toast.LENGTH_SHORT).show();
-                    } else {
-                        Toast.makeText(getApplicationContext(),"2 "+ response.message(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(),"3 "+ response.message(), Toast.LENGTH_SHORT).show();
                     }
                 }
 
