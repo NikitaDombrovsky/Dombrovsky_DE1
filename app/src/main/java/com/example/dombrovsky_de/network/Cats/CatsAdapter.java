@@ -38,7 +38,12 @@ public class CatsAdapter extends RecyclerView.Adapter<CatsAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         CatsResponce catsResponce = catsResponces.get(position);
-        holder.swtTextCat(catsResponce.getName());
+        Contact contact = catsResponce.contact;
+        holder.swtTextName(catsResponce.getName());
+        holder.swtTextCity(catsResponce.getCity());
+        holder.swtTextMobile(contact.getModile());
+        holder.swtTextSkype(contact.getSkype());
+        holder.swtTextEmail(contact.getEmail());
     }
 
     @Override
@@ -64,8 +69,20 @@ public class CatsAdapter extends RecyclerView.Adapter<CatsAdapter.ViewHolder> {
             this.Item_Cat_Email = view.findViewById(R.id.Item_Cat_Email);
             this.Item_Cat_Skype = view.findViewById(R.id.Item_Cat_Skype);
         }
-        public void swtTextCat(String text){
+        public void swtTextName(String text){
             this.Item_Cat_Name.setText(text);
+        }
+        public void swtTextCity(String text){
+            this.Item_Cat_City.setText(text);
+        }
+        public void swtTextMobile(String text){
+            this.Item_Cat_Mobile.setText(text);
+        }
+        public void swtTextEmail(String text){
+            this.Item_Cat_Email.setText(text);
+        }
+        public void swtTextSkype(String text){
+            this.Item_Cat_Skype.setText(text);
         }
 
     }

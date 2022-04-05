@@ -6,35 +6,35 @@ import java.util.List;
 
 public class Contact {
     @SerializedName("modile")
-    private String id;
+    private String modile;
 
     @SerializedName("email")
-    private String name;
+    private String email;
 
     @SerializedName("skype")
-    private String city;
+    private String skype;
 
-    public String getId() {
-        return id;
+    public String getModile() {
+        return modile;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setModile(String modile) {
+        this.modile = modile;
     }
 
-    public String getName() {
-        return name;
+    public String getEmail() {
+        return email;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public String getCity() {
-        return city;
+    public String getSkype() {
+        return skype;
     }
 
-    public void setCity(String city) {
-        this.city = city;
+    public void setSkype(String skype) {
+        this.skype = skype;
     }
 }
